@@ -1,0 +1,42 @@
+.blogBanner{
+
+	margin-top: 20px;
+	width: 100%;
+	min-height: 100px;
+	background-color: #327473;
+}
+
+.title{
+
+	background-color: #761111;
+}
+
+.subtitle{
+
+	background-color: #129912;
+}
+
+.bloggingBody{
+
+	margin-top: 20px;
+	width: 100%;
+	min-height: 300px;
+	background-color: #327473;
+}
+
+.theBlog{
+
+	display: inline-block;
+	width: 69%;
+	min-height: 200px;
+	background-color: #888888;
+}
+
+.blogArchive {
+
+	display: inline-block;
+	width: 27%;
+	min-height: 200px;
+	background-color: #451299;
+
+}

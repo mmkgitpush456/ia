@@ -1,0 +1,51 @@
+.photoBanner{
+
+	margin-top: 20px;
+	width: 100%;
+	min-height: 100px;
+	background-color: #327473;
+}
+
+.title{
+
+	background-color: #761111;
+}
+
+.subtitle{
+
+	background-color: #129912;
+}
+
+.photosBody{
+
+	margin-top: 20px;
+	width: 100%;
+	min-height: 300px;
+	background-color: #327473;
+}
+
+.thePhotos{
+
+	float: left;	
+	width: 69%;
+	min-height: 200px;
+	background-color: #888888;
+}
+
+.imgThumb{
+
+	float: left;
+	margin-left: 5%;
+	width: 100px;
+	height: 100px;
+
+}
+
+.photosArchive {
+
+	float: left;
+	width: 27%;
+	min-height: 200px;
+	background-color: #451299;
+
+}

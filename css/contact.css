@@ -1,0 +1,21 @@
+.contactBanner{
+
+	margin-top: 20px;
+	width: 100%;
+	min-height: 100px;
+	background-color: #327473;
+}
+
+.title{
+
+	background-color: #761111;
+}
+
+
+.contactBody{
+
+	margin-top: 20px;
+	width: 100%;
+	min-height: 300px;
+	background-color: #327473;
+}
