@@ -29,12 +29,7 @@ $header = new Header('Home Page', 'home.css');
 	  			</div>
 
 	  		</div>
-
-	  		<div class="footer">
-
-	  			FOOTER
-	  		</div>
-
+	  		<?php include('includes/footer.php'); ?>
 	  	</div>
 
 	  </body>

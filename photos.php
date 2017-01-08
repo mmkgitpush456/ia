@@ -66,9 +66,7 @@ $header = new Header('Photos', 'photos.css');
 
 		</div>
 
-		<div class="footer">
-			FOOTER
-		</div>
+		<?php include('includes/footer.php'); ?>
 
 	</div>
 

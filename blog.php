@@ -40,10 +40,7 @@ $header = new Header('Blog', 'blog.css');
 
 		</div>
 
-		<div class="footer">
-
-			FOOTER
-		</div>
+		<?php include('includes/footer.php'); ?>
 
 	</div>
 
