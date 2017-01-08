@@ -1,75 +1,77 @@
+<?php 
+
+require_once('page_configs/header.php');
+$header = new Header('Photos', 'photos.css');
+
+?>
+
 <!doctype html>
 <html>
-	  <head>
-	    <meta charset="utf-8">
-	    <title>Photos Page</title>
-	    <link rel="stylesheet" href="css/main.css">
-	    <link rel="stylesheet" href="css/photos.css">
-	  </head>
-	  <body>
 
-	  	<div id="mainContainer">
+<?php include('includes/header.php'); ?>
 
-	  		<div id="titleBanner"></div>
+<body>
 
-	  		<div id="menuDiv">
-	  			<?php include("includes/menu.php"); ?>
-	  		</div>
+	<div id="mainContainer">
 
-	  		<div class="photoBanner">
+		<div id="titleBanner"></div>
 
-	  			<div class="title">PHOTOS TITLE</div>
+		<?php include("includes/menu.php"); ?>
 
-	  			<div class="subtitle">PHOTOS SUBTITLE</div>
+		<div class="photoBanner">
 
-	  		</div>
+			<div class="title">PHOTOS TITLE</div>
 
-	  		<div class="photosBody">
+			<div class="subtitle">PHOTOS SUBTITLE</div>
 
-	  			<div class="thePhotos">
+		</div>
 
-	  				<h1>PHOTO THUMBNAILS</h1>
+		<div class="photosBody">
 
-	  				<div>
+			<div class="thePhotos">
 
-	  					<img class="imgThumb" src="../overlook.jpg">
+				<h1>PHOTO THUMBNAILS</h1>
 
-	  					<img class="imgThumb" src="../overlook.jpg">
+				<div>
 
-	  					<img class="imgThumb" src="../overlook.jpg">
+					<img class="imgThumb" src="../overlook.jpg">
 
-	  					<img class="imgThumb" src="../overlook.jpg">
+					<img class="imgThumb" src="../overlook.jpg">
 
-	  					<img class="imgThumb" src="../overlook.jpg">
+					<img class="imgThumb" src="../overlook.jpg">
+
+					<img class="imgThumb" src="../overlook.jpg">
+
+					<img class="imgThumb" src="../overlook.jpg">
 
 
 
 
 
-	  				</div>
+				</div>
 
 
-	  				<div class="clear"></div>
+				<div class="clear"></div>
 
-	  			</div>
+			</div>
 
-	  			<div class="photosArchive">
+			<div class="photosArchive">
 
-	  				ARCHIVES
+				ARCHIVES
 
-	  			</div>
+			</div>
 
-	  			<div class="clear"></div>
+			<div class="clear"></div>
 
 
-	  		</div>
+		</div>
 
-	  		<div class="footer">
-	  			FOOTER
-	  		</div>
+		<div class="footer">
+			FOOTER
+		</div>
 
-	  	</div>
+	</div>
 
-	  </body>
+</body>
 
 </html>

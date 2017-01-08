@@ -1,11 +1,13 @@
+<?php 
+
+require_once('page_configs/header.php');
+$header = new Header('About', 'blog.css');
+
+?>
+
 <!doctype html>
 <html>
-	  <head>
-	    <meta charset="utf-8">
-	    <title>About Page</title>
-	    <link rel="stylesheet" href="css/main.css">
-	    <link rel="stylesheet" href="css/blog.css">
-	  </head>
+	<?php include('includes/header.php'); ?>
 	  <body>
 
 	  	<div id="mainContainer">

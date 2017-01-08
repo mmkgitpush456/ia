@@ -1,3 +1,5 @@
+					
+				<div id="menuDiv">
 					<a href="index.php">
 			  			<div class="menuItem">
 			  				Home
@@ -27,3 +29,4 @@
 			  				Contact
 			  			</div>
 		  			</a>
+		  		</div>

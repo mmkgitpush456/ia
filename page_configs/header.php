@@ -1,28 +1,31 @@
 <?php 
 
 
-	public class Header {
+	
+	class Header {
 
-		private $title;
-		private $styleSheet;
+		private $mTitle;
+		private $mStylesheet;
 
 		public function __construct($title, $styleSheet) {
 
-			$this->title = $title;
-			$this->styleSheet = $styleSheet;
+			$this->mTitle = $title;
+			$this->mStylesheet = $styleSheet;
 		}
 
 		public function getTitle(){
 
-			return $this->title;
+			return $this->mTitle;
 
 		}
 
-		public function getStyleSheet($styleSheet){
+		public function getStylesheet(){
 
-			return $this->styleSheet;
+			return $this->mStylesheet;
 		}
+		
 
 	}
+	
 
 ?>

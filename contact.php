@@ -1,49 +1,51 @@
+<?php 
+
+require_once('page_configs/header.php');
+$header = new Header('Contact', 'contact.css');
+
+?>
+
 <!doctype html>
 <html>
-	  <head>
-	    <meta charset="utf-8">
-	    <title>Contact Page</title>
-	    <link rel="stylesheet" href="css/main.css">
-	    <link rel="stylesheet" href="css/contact.css">
-	  </head>
-	  <body>
 
-	  	<div id="mainContainer">
+<?php include('includes/header.php'); ?>
 
-	  		<div id="titleBanner"></div>
+<body>
 
-	  		<div id="menuDiv">
-	  			<?php include("includes/menu.php"); ?>
-	  		</div>
+	<div id="mainContainer">
 
-	  		<div class="contactBanner">
+		<div id="titleBanner"></div>
 
-	  			<div class="title">CONTACT</div>
+		<?php include("includes/menu.php"); ?>
 
-	  		</div>
+		<div class="contactBanner">
 
-	  		<div class="contactBody">
+			<div class="title">CONTACT</div>
 
-	  			<form action="POST">
+		</div>
 
-	  				<h2>NAME</h2>
+		<div class="contactBody">
 
-	  				<h2>EMAIL</h2>
+			<form action="POST">
 
-	  				<h2>SUBJECT</h2>
+				<h2>NAME</h2>
 
-	  				<h2>MESSAGE</h2>
+				<h2>EMAIL</h2>
 
-	  			</form>
+				<h2>SUBJECT</h2>
 
-	  		</div>
+				<h2>MESSAGE</h2>
 
-	  		<div class="footer">
-	  			FOOTER
-	  		</div>
+			</form>
 
-	  	</div>
+		</div>
 
-	  </body>
+		<div class="footer">
+			FOOTER
+		</div>
+
+	</div>
+
+</body>
 
 </html>

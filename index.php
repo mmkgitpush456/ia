@@ -1,22 +1,22 @@
+<?php 
+
+require_once('page_configs/header.php');
+$header = new Header('Home Page', 'home.css');
+
+?>
+
 <!doctype html>
 <html>
-	  <head>
-	    <meta charset="utf-8">
-	    <title>Home Page</title>
-	    <link rel="stylesheet" href="css/main.css">
-	    <link rel="stylesheet" href="css/home.css">
-	  </head>
+	  <?php include('includes/header.php'); ?>
 	  <body>
 
 	  	<div id="mainContainer">
 
 	  		<div id="titleBanner"></div>
 
-	  		<div id="menuDiv">
 
-	  			<?php include("includes/menu.php"); ?>
+	  		<?php include("includes/menu.php"); ?>
 
-	  		</div>
 
 	  		<div class="homeContainer">
 
