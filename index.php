@@ -1,7 +1,7 @@
 <?php 
 
 require_once('page_configs/header.php');
-$header = new Header('Home Page', 'home.css');
+$header = new Header('Inspiration-Active', 'home.css');
 
 ?>
 

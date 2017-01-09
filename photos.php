@@ -34,7 +34,18 @@ $header = new Header('Photos', 'photos.css');
 
 				<div>
 
-					<img class="imgThumb" src="../overlook.jpg">
+
+					<?php 
+
+					for($i = 0; $i < 5; $i++) {
+
+						echo " <img class=\"imgThumb\" src=\"photos/overlook.jpg\"> ";
+					}
+
+					?>
+
+				<!--
+					<img class="imgThumb" src="photos/overlook.jpg">
 
 					<img class="imgThumb" src="../overlook.jpg">
 
@@ -43,6 +54,7 @@ $header = new Header('Photos', 'photos.css');
 					<img class="imgThumb" src="../overlook.jpg">
 
 					<img class="imgThumb" src="../overlook.jpg">
+				-->
 
 
 
