@@ -9,10 +9,6 @@ require_once('db/db_operator.php');
 
 			$this ->dbOperator = new dbOperator(IA);
 
-			$quotes = $this->getOrganizedQuotes();
-
-			echo count($quotes);
-
 		}
 
 
@@ -51,8 +47,6 @@ require_once('db/db_operator.php');
 
 				$quote = array( 'quoteText' . $i => $row['QUOTE_TEXT'], 'quoteAuthor' . $i => $row['QUOTE_AUTHOR'] );
 				$quotesHolder[$i] = $quote;
-				//$quotesHolder['quoteText' . $i] = $row['QUOTE_TEXT'];
-				//$quotesHolder['quoteAuthor' . $i] = $row['QUOTE_AUTHOR'];
 				$i++;
 			}
 			return $quotesHolder;

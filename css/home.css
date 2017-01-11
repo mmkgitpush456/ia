@@ -19,3 +19,12 @@
 .clear {
     clear: both;
 }
+
+.quoteText {
+
+	display: none;
+}
+
+.quoteAuthor {
+	display: none;
+}

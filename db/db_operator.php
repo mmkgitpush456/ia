@@ -31,9 +31,7 @@ if(is_resource($conn) ) {
 
 			if (!$this->conn) {
 				die("Connection failed: " . mysqli_connect_error());
-			} else {
-				echo "CONNECTION SUCCESSFUL";
-			}
+			} 
 		}
 
 		/*

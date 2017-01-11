@@ -22,13 +22,19 @@ $header = new Header('Inspiration-Active', 'home.css');
 
 	  			<div class="quoteBox">
 	  				<?php 
+
 	  				$quoteMachine = new QuoteMachine(); 
+	  				$quotes = $quoteMachine->getOrganizedQuotes();
 
+	  				for($i = 0; $i < count($quotes); $i++) {
 
-	  				
+	  				?>
+	  					<h1 class="quoteText" id="quoteText_<?php echo $i; ?>"><?php echo $quotes[$i]['quoteText'.$i];?></h1>
+	  					<h2 class="quoteAuthor" id="quoteAuthor_<?php echo $i; ?>"><?php echo $quotes[$i]['quoteAuthor'.$i]; ?></h2>
 
-	  				
-
+	  				<?php
+	  				}
+	  			
 	  				?>
 	  			</div>
 
@@ -37,7 +43,7 @@ $header = new Header('Inspiration-Active', 'home.css');
 	  			</div>
 
 	  			<div class="homeBox">
-	  				PHOTOS
+	  				PHOTO ALBUMS
 	  			</div>
 
 	  		</div>
