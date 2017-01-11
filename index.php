@@ -1,6 +1,6 @@
 <?php 
-
 require_once('page_configs/header.php');
+require_once('model/quote_machine.php');
 $header = new Header('Inspiration-Active', 'home.css');
 
 ?>
@@ -19,6 +19,18 @@ $header = new Header('Inspiration-Active', 'home.css');
 
 
 	  		<div class="homeContainer">
+
+	  			<div class="quoteBox">
+	  				<?php 
+	  				$quoteMachine = new QuoteMachine(); 
+
+
+	  				
+
+	  				
+
+	  				?>
+	  			</div>
 
 	  			<div class="homeBox">
 	  				BLOGS

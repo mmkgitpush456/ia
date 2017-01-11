@@ -50,3 +50,11 @@ a {
 	background-color: #274773;
 	margin-top: 20px;
 }
+
+.quoteBox {
+	margin: 0 auto;
+	width: 90%;
+	text-align: left;
+	min-height: 100px;
+	background-color: #383921;
+}
