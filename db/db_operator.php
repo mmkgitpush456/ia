@@ -32,6 +32,12 @@ if(is_resource($conn) ) {
 			if (!$this->conn) {
 				die("Connection failed: " . mysqli_connect_error());
 			} 
+
+			/*
+			else {
+				echo "CONNECTION ACTIVE";
+			}
+			*/
 		}
 
 		/*
@@ -41,23 +47,6 @@ if(is_resource($conn) ) {
 
 			mysqli_close($this->conn);
 
-		}
-
-		/*
-		Helper method that gets a number of quotes
-		from the database.
-		*/
-		public function getListOfRandomQuotes($numQuotes){
-
-			$sql = "SELECT QUOTE_ID, QUOTE_TEXT, QUOTE_AUTHOR from QUOTES order by rand() limit $numQuotes";
-			$result = mysqli_query($this->conn, $sql);
-
-			if (mysqli_num_rows($result) > 0) {
-				return $result;
-			} else {
-				echo "0 results";
-				return null;
-			}
 		}
 
 		public function getConn(){

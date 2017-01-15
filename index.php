@@ -29,8 +29,8 @@ $header = new Header('Inspiration-Active', 'home.css');
 	  				for($i = 0; $i < count($quotes); $i++) {
 
 	  				?>
-	  					<h1 class="quoteText" id="quoteText_<?php echo $i; ?>"><?php echo $quotes[$i]['quoteText'.$i];?></h1>
-	  					<h2 class="quoteAuthor" id="quoteAuthor_<?php echo $i; ?>"><?php echo $quotes[$i]['quoteAuthor'.$i]; ?></h2>
+	  					<h1 class="quoteText" id="quoteText_<?php echo $i; ?>"><?php echo $quotes[$i]['quoteText'];?></h1>
+	  					<h2 class="quoteAuthor" id="quoteAuthor_<?php echo $i; ?>"><?php echo $quotes[$i]['quoteAuthor']; ?></h2>
 
 	  				<?php
 	  				}

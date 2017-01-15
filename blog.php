@@ -1,7 +1,8 @@
 <?php 
-
 require_once('page_configs/header.php');
+require_once('model/blog_machine.php');
 $header = new Header('Blog', 'blog.css');
+
 
 ?>
 
@@ -22,7 +23,7 @@ $header = new Header('Blog', 'blog.css');
 
 		<div class="blogBanner">
 
-			<div class="title">BLOG TITLE</div>
+			<div class="title"><?php $blogMachine = new BlogMachine(); ?></div>
 
 			<div class="subtitle">BLOG SUBTITLE</div>
 
