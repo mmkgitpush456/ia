@@ -10,27 +10,8 @@ require_once('db/db_operator.php');
 
 			$this ->dbOperator = new dbOperator(IA);
 
-			$blogPost = $this->getMostRecentPost();
-			$row = mysqli_fetch_assoc($blogPost);
-			echo $row['BLOG_TITLE'];
 
 		}
-	
-
-		/*
-		private function getRandomQuotesQuery($numQuotes){
-
-			$sql = "SELECT QUOTE_TEXT, QUOTE_AUTHOR from QUOTES order by rand() limit $numQuotes";
-			$result = mysqli_query($this->dbOperator->getConn(), $sql);
-
-			if (mysqli_num_rows($result) > 0) {
-				return $result;
-			} else {
-				echo "0 results";
-				return null;
-			}
-		}
-		*/
 
 		public function getMostRecentPost(){
 
@@ -40,14 +21,17 @@ require_once('db/db_operator.php');
 			$result = mysqli_query($this->dbOperator->getConn(), $sql);
 
 			if (mysqli_num_rows($result) > 0) {
-				return $result;
+				return mysqli_fetch_assoc($result);
 			} else {
 				echo "0 results";
 				return null;
 			}
-
 		}
 
+		public function organizeAndPrintBlogPost($blogPost){
+			function val($val) { return "<p>" . $val . "</p>"; }
+			echo implode("</n>", array_map('val', explode(PHP_EOL, $blogPost ) ) );
+		}
 
 
 	}

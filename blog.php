@@ -3,7 +3,8 @@ require_once('page_configs/header.php');
 require_once('model/blog_machine.php');
 $header = new Header('Blog', 'blog.css');
 
-
+$blogMachine = new BlogMachine();
+$selectedBlog = $blogMachine->getMostRecentPost();
 ?>
 
 <!doctype html>
@@ -23,23 +24,29 @@ $header = new Header('Blog', 'blog.css');
 
 		<div class="blogBanner">
 
-			<div class="title"><?php $blogMachine = new BlogMachine(); ?></div>
+			<div class="title"><?php echo $selectedBlog['BLOG_TITLE'];  ?></div>
 
-			<div class="subtitle">BLOG SUBTITLE</div>
+			<div class="subtitle">By <?php echo $selectedBlog['BLOG_AUTHOR']; ?></div>
 
 		</div>
 
 		<div class="bloggingBody">
 
 			<div class="theBlog">
-				BLOG STUFF
+				 <?php $blogMachine -> organizeAndPrintBlogPost($selectedBlog['BLOG_TEXT'] ); ?> 
 			</div>
 
 			<div class="blogArchive">
 				ARCHIVES
 			</div>
 
+
+			<div class="clear"></div>
+
+
 		</div>
+
+
 
 		<?php include('includes/footer.php'); ?>
 
