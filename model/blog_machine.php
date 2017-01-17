@@ -1,24 +1,36 @@
 <?php 
 require_once('db/db_operator.php');
 
-
+/*
+The Blog Machine class controls the printing of information 
+from the BLOGS portion of the database to the blogs.php page.
+*/
 	class BlogMachine {
 
-		private $dbOperator;
+		private $dbOperator;										//DB instance
+		private $focusedBlog;										//selected blog piece pulled in from the URL
 
-		public function __construct(){
+		public function __construct($theSelectedBlog){
 
 			$this ->dbOperator = new dbOperator(IA);
-
-
+			$this ->focusedBlog = $theSelectedBlog;
 		}
 
 
+		/*
+		Helper function that selected the desired blog post based on ID.
+		If the user clicks on the blog link from the main menu, the most recently entered
+		post is selected and displayed.
+		*/
+		public function getSelectedBlogPost(){
 
-		public function getMostRecentPost(){
-
-			//SELECT fields FROM table ORDER BY id DESC LIMIT 1;
-			$sql = "SELECT BLOG_TITLE, BLOG_AUTHOR, BLOG_DATE_PUBLISHED, BLOG_TEXT FROM BLOGS ORDER BY BLOG_ID DESC LIMIT 1";
+			$sql = NULL;
+			
+			if($this->focusedBlog == NULL) {
+				$sql = "SELECT BLOG_TITLE, BLOG_AUTHOR, BLOG_DATE_PUBLISHED, BLOG_TEXT FROM BLOGS ORDER BY BLOG_ID DESC LIMIT 1";
+			} else {
+				$sql = "SELECT BLOG_TITLE, BLOG_AUTHOR, BLOG_DATE_PUBLISHED, BLOG_TEXT FROM BLOGS WHERE BLOG_ID = " . $this->focusedBlog;
+			}
 
 			$result = mysqli_query($this->dbOperator->getConn(), $sql);
 
@@ -30,6 +42,11 @@ require_once('db/db_operator.php');
 			}
 		}
 
+		/*
+		Helper function that selects all the blog titles and their corresponding
+		ID's in order to be printed out in the ARCHIVES section of the blogs
+		page.
+		*/
 		public function getAllBlogTitles(){
 
 			$sql = "SELECT BLOG_TITLE, BLOG_ID FROM BLOGS ORDER BY BLOG_ID DESC";
@@ -44,12 +61,11 @@ require_once('db/db_operator.php');
 
 		}
 
-		public function organizeAndPrintBlogPost($blogPost){
-			function val($val) { return "<p>" . $val . "</p>"; }
-			echo implode("</n>", array_map('val', explode(PHP_EOL, $blogPost ) ) );
-		}
-
-
+		/*
+		Currently takes the results from the getAllBlogTitles method
+		and organizes it into a multidimensional array to be printed
+		out on the blogs page
+		*/
 		public function getOrganizedSqlResult($result){
 
 			$container = NULL;
@@ -61,10 +77,20 @@ require_once('db/db_operator.php');
 				$container[$i]['BLOG_ID'] = $row['BLOG_ID'];
 				$i++;
 			}
-
-
 			return $container;
 		}
+
+		/*
+		Organizer method that takes the text from a selected blog post and
+		prints each paragraph out with surrounding <p> tags for better display.
+		*/
+		public function organizeAndPrintBlogPost($blogPost){
+			function val($val) { return "<p>" . $val . "</p>"; }
+			echo implode("</n>", array_map('val', explode(PHP_EOL, $blogPost ) ) );
+		}
+
+
+		
 
 	}
 

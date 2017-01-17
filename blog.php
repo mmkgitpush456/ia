@@ -3,10 +3,11 @@ require_once('page_configs/header.php');
 require_once('model/blog_machine.php');
 $header = new Header('Blog', 'blog.css');
 
-$blogMachine = new BlogMachine();
+$blogMachine = new BlogMachine($_GET['blog_id']);
 
 $titles = $blogMachine->getOrganizedSqlResult($blogMachine->getAllBlogTitles() );
-$selectedBlog = $blogMachine->getMostRecentPost();
+$selectedBlog = $blogMachine->getSelectedBlogPost();
+
 ?>
 
 <!doctype html>
@@ -41,9 +42,11 @@ $selectedBlog = $blogMachine->getMostRecentPost();
 			<div class="blogArchive">
 				<h2>ARCHIVES</h2>
 
-				<?php  for($i = 0; $i < count($titles); $i++) { ?>
+				<?php  for($i = 0; $i < count($titles); $i++) { 
 
-					<h3><?php echo $titles[$i]['BLOG_TITLE']; ?></h3>
+					//'<a href="pass.php?link=' . $a . '>Link 1</a>';
+					?>
+					<h3><a href="blog.php?blog_id=<?php echo $titles[$i]['BLOG_ID'];?>"><?php echo $titles[$i]['BLOG_TITLE']; ?></a> </h3>
 
 				<?php 
 					}
