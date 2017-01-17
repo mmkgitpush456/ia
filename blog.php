@@ -4,6 +4,8 @@ require_once('model/blog_machine.php');
 $header = new Header('Blog', 'blog.css');
 
 $blogMachine = new BlogMachine();
+
+$titles = $blogMachine->getOrganizedSqlResult($blogMachine->getAllBlogTitles() );
 $selectedBlog = $blogMachine->getMostRecentPost();
 ?>
 
@@ -37,7 +39,16 @@ $selectedBlog = $blogMachine->getMostRecentPost();
 			</div>
 
 			<div class="blogArchive">
-				ARCHIVES
+				<h2>ARCHIVES</h2>
+
+				<?php  for($i = 0; $i < count($titles); $i++) { ?>
+
+					<h3><?php echo $titles[$i]['BLOG_TITLE']; ?></h3>
+
+				<?php 
+					}
+				 ?>
+
 			</div>
 
 
